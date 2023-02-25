@@ -6,8 +6,8 @@ const CounterItem = () => {
   return (
     <div>
       {count}
-      <button onClick={() => setCount((p) => p + 1)}>+</button>
-      <button onClick={() => setCount((p) => p - 1)}>-</button>
+      <button onClick={() => setCount((p) => p + 1)} className='btn btn-blue' >+</button>
+      <button onClick={() => setCount((p) => p - 1)} className='btn btn-red' >-</button>
     </div>
   );
 };

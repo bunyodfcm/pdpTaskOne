@@ -1,0 +1,41 @@
+.btn {
+    padding: 6px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    margin: 2px;
+  }
+  .btn:hover {
+    opacity: 80%;
+  }
+  .btn:active {
+    opacity: 100%;
+    box-shadow: 0 0 3px black;
+  }
+  .btn-disabled {
+    pointer-events: none;
+  }
+  .btn-blue{
+    background-color: rgb(57, 68, 231);
+  }
+  .btn-red{
+    background-color: rgb(230, 34, 28);
+  }
+  .btn-green{
+    background-color: rgb(27, 172, 7);
+  }
+
+  .btn-link{
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    border-bottom: 2px solid rgb(27, 172, 7);
+}
+.btn-link:hover{
+    border-bottom: 2px solid rgb(230, 34, 28);
+}
+.btn-link:focus{
+    border-bottom: 2px solid rgb(57, 68, 231);
+}

@@ -1,15 +1,18 @@
-import React from 'react'
-import Counters from '../task-one/counters/Counters';
-import Stopwatch from '../task-one/stopwatch/Stopwatch';
+import React, { useState } from "react";
+import TaskOne from "../task-one/Task-one";
+import './App.css'
 
-
-function App(props) {
+function App() {
+  const [lessonOne, setLessonOne] = useState(false);
   return (
-    <div>
-      <h3>Homework 1. Stopwatch</h3>
-      <Stopwatch/>
-      <h3>Homework 2. Stopwatch</h3>
-      <Counters/>
+    <div className="lesson">
+      <button
+        onClick={() => setLessonOne((prev) => !prev)}
+        className="btn-link"
+      >
+        lesson 1
+      </button>
+      <div className="lesson-body">{lessonOne ? <TaskOne /> : ""}</div>
     </div>
   );
 }

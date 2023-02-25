@@ -1,0 +1,24 @@
+.timer{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: rgb(245, 240, 234);
+    padding: 30px 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timer-card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.timer-start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
