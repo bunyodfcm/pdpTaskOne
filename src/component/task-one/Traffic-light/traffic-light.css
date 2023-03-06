@@ -1,0 +1,33 @@
+.traffic-light {
+  padding: 30px 20px 10px 20px;
+  background-color: rgb(27, 29, 32);
+  display: inline-block;
+  flex-direction: column;
+}
+.traffic-light__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.traffic-light__item {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(90, 72, 72);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+
+}
+.bg-red{
+    background-color: rgb(235, 19, 19);
+}
+.bg-yellow{
+    background-color: rgb(244, 248, 7);
+}
+.bg-green{
+    background-color: rgb(17, 236, 17);
+}
