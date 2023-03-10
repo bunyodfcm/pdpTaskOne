@@ -5,27 +5,37 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 const CounterFive = () => {
     const [addressCount, setAddressCount] = useState(0)
-    useEffect({
-        if (ad) {
+    const [errorText, setErrorText] = useState('')
+    // useEffect({
+    //     if (ad) {
             
-        }
-    })
+    //     }
+    // })
     const removeAddressCount = () =>{
         if (addressCount>0) {
             setAddressCount(prev=>prev-1)
+            setErrorText('')
         }
     }
-    console.log(counterData.address.length);
+    const addAddressCount = () =>{
+        if (addressCount + 1<counterData.address.length) {
+            setAddressCount(prev=>prev+1)
+            setErrorText('')
+        }else  {
+            setErrorText('sizda jami ' + addressCount + ' ta malumot bor')
+        }
+    }
   return (
     <div>
         <p>First Name: {counterData.firstName}</p>
         <p>Last Name: {counterData.lastName}</p>
-        <p>Address: {counterData.address[0].name}</p>
+        <p>Address: {counterData.address[addressCount].name}</p>
         <div>
             <button className='btn btn-white' onClick={removeAddressCount} > - </button>
-            <span>0</span>
-            <button className='btn btn-white' onClick={()=>setAddressCount(prev=>prev+1)}> + </button>
+            <span>{addressCount}</span>
+            <button className='btn btn-white' onClick={addAddressCount}> + </button>
         </div>
+        <p className='errorText'>{errorText}</p>
     </div>
   )
 }
